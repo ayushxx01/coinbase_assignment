@@ -1,3 +1,4 @@
+import 'package:coinboost/presentation/screens/assignment_page.dart';
 import 'package:coinboost/presentation/widgets/my_button.dart';
 import 'package:coinboost/presentation/widgets/text_field.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
             SizedBox(height: 20),
 
-            MyButton(onTap: () {}),
+            MyButton(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => AssignmentPage()),
+                );
+              },
+            ),
           ],
         ),
       ),
