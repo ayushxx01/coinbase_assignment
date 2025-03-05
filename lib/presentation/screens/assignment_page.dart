@@ -92,7 +92,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
               ],
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
             GameCard(
               imagePath: 'assets/game1.png',
               title: 'Play Game',
@@ -100,7 +100,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
               location: () {},
             ),
 
-            const SizedBox(height: 30),
+            const SizedBox(height: 35),
 
             GameCard(
               imagePath: 'assets/task2.png',
