@@ -32,6 +32,7 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Image.asset('assets/splash_logo.png', height: 190),
 
+            const SizedBox(height: 20),
             Text(
               'C O I N B O O S T',
               style: TextStyle(

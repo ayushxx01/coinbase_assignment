@@ -1,7 +1,8 @@
 import 'package:coinboost/presentation/screens/profile.dart';
 import 'package:coinboost/presentation/screens/reward.dart';
-import 'package:coinboost/presentation/screens/task_page.dart';
+import 'package:coinboost/presentation/screens/task_instruc.dart';
 import 'package:coinboost/presentation/widgets/card.dart';
+import 'package:coinboost/presentation/widgets/custom_bottom_bar.dart';
 import 'package:coinboost/presentation/widgets/daily.dart';
 import 'package:flutter/material.dart';
 
@@ -120,47 +121,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Color(0xFFF7931A), // Orange background
-        items: [
-          BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => AssignmentPage()),
-                );
-              },
-              icon: Icon(Icons.home, size: 30, color: Colors.white),
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => RewardPage()),
-                );
-              },
-              icon: Image.asset('assets/app.png', height: 30),
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: IconButton(
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()),
-                );
-              },
-              icon: Icon(Icons.person, size: 30, color: Colors.white),
-            ),
-            label: '',
-          ),
-        ],
-      ),
+      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }

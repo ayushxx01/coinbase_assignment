@@ -45,6 +45,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   MaterialPageRoute(builder: (context) => AssignmentPage()),
                 );
               },
+              title: 'Continue',
+              side: 308,
+              top: 48,
             ),
           ],
         ),

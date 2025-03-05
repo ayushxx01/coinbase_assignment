@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final void Function() onTap;
-  const MyButton({super.key, required this.onTap});
+  final String title;
+  final double side;
+  final double top;
+  const MyButton({
+    super.key,
+    required this.onTap,
+    required this.title,
+    required this.side,
+    required this.top,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +20,8 @@ class MyButton extends StatelessWidget {
         onTap();
       },
       child: Container(
-        width: 307,
-        height: 48,
+        width: side,
+        height: top,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: Color(0xFFF7931A), // Orange color
@@ -26,7 +35,7 @@ class MyButton extends StatelessWidget {
           ],
         ),
         child: Text(
-          "Continue",
+          title,
           style: TextStyle(
             color: Colors.white,
             fontSize: 18,
