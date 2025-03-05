@@ -10,15 +10,45 @@ class NewsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(left: 16, right: 16),
-        child: Column(
-          children: [
-            Container(height: 37, width: 400, color: Color(0xFFF7931A)),
-            const SizedBox(height: 20),
-            Image.asset('assets/news_task.png'),
-          ],
-        ),
+      appBar: AppBar(backgroundColor: Color(0xFFF7931A)),
+      body: Column(
+        children: [
+          Stack(
+            children: [
+              SingleChildScrollView(
+                child: Center(
+                  child: SizedBox(
+                    height: 700,
+                    child: Image.asset('assets/news_task.png'),
+                  ),
+                ),
+              ),
+              Positioned(
+                top: 20,
+                left: 20,
+                right: 20,
+                child: Container(
+                  padding: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black26, blurRadius: 4),
+                    ],
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Icon(Icons.close, size: 20),
+                      Text("10.00", style: TextStyle(fontSize: 16)),
+                      ElevatedButton(onPressed: () {}, child: Text("Claim")),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
       bottomNavigationBar: CustomBottomBar(),
     );

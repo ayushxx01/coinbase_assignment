@@ -1,5 +1,3 @@
-import 'package:coinboost/presentation/screens/profile.dart';
-import 'package:coinboost/presentation/screens/reward.dart';
 import 'package:coinboost/presentation/screens/task_instruc.dart';
 import 'package:coinboost/presentation/widgets/card.dart';
 import 'package:coinboost/presentation/widgets/custom_bottom_bar.dart';
@@ -14,18 +12,15 @@ class AssignmentPage extends StatefulWidget {
 }
 
 class _AssignmentPageState extends State<AssignmentPage> {
-  int _selectedIndex = 0; // Track the selected tab index
-
-  // List of pages corresponding to each tab
-  final List<Widget> _pages = [AssignmentPage(), TaskPage(), RewardPage()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: Color(0xFFF7931A)),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.only(left: 8, right: 8),
         child: Column(
           children: [
-            const SizedBox(height: 60),
+            SizedBox(height: 10),
             Padding(
               padding: const EdgeInsets.only(left: 20, right: 20),
               child: Row(
@@ -73,7 +68,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
               ),
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
 
             DailyRewards(),
 
@@ -97,7 +92,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
               ],
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 20),
             GameCard(
               imagePath: 'assets/game1.png',
               title: 'Play Game',
@@ -105,7 +100,7 @@ class _AssignmentPageState extends State<AssignmentPage> {
               location: () {},
             ),
 
-            const SizedBox(height: 40),
+            const SizedBox(height: 30),
 
             GameCard(
               imagePath: 'assets/task2.png',
