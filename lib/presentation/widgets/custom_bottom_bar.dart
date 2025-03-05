@@ -8,46 +8,55 @@ class CustomBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      backgroundColor: Color(0xFFF7931A), // Orange background
-      items: [
-        BottomNavigationBarItem(
-          icon: IconButton(
+    return Container(
+      height: 80, // Reduce overall navbar height
+      decoration: BoxDecoration(
+        color: Color(0xFFF7931A), // Orange background
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          IconButton(
             onPressed: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => AssignmentPage()),
               );
             },
-            icon: Icon(Icons.home, size: 30, color: Colors.white),
+            icon: Image.asset(
+              'assets/home.png',
+              height: 40,
+              width: 40,
+            ), // Reduced size
           ),
-          label: '',
-        ),
-        BottomNavigationBarItem(
-          icon: IconButton(
+          IconButton(
             onPressed: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => RewardPage()),
               );
             },
-            icon: Image.asset('assets/app.png', height: 30),
+            icon: Image.asset(
+              'assets/app.png',
+              height: 45,
+              width: 45,
+            ), // Reduced size
           ),
-          label: '',
-        ),
-        BottomNavigationBarItem(
-          icon: IconButton(
+          IconButton(
             onPressed: () {
               Navigator.pushReplacement(
                 context,
                 MaterialPageRoute(builder: (context) => ProfilePage()),
               );
             },
-            icon: Icon(Icons.person, size: 30, color: Colors.white),
+            icon: Image.asset(
+              'assets/user.png',
+              height: 40,
+              width: 40,
+            ), // Reduced size
           ),
-          label: '',
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

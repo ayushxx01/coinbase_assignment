@@ -15,16 +15,14 @@ class NewsScreen extends StatelessWidget {
         children: [
           Stack(
             children: [
-              SingleChildScrollView(
-                child: Center(
-                  child: SizedBox(
-                    height: 700,
-                    child: Image.asset('assets/news_task.png'),
-                  ),
+              Center(
+                child: SizedBox(
+                  height: 700,
+                  child: Image.asset('assets/news_task.png'),
                 ),
               ),
               Positioned(
-                top: 20,
+                top: 0,
                 left: 20,
                 right: 20,
                 child: Container(
@@ -37,11 +35,39 @@ class NewsScreen extends StatelessWidget {
                     ],
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Icon(Icons.close, size: 20),
-                      Text("10.00", style: TextStyle(fontSize: 16)),
-                      ElevatedButton(onPressed: () {}, child: Text("Claim")),
+                      IconButton(
+                        icon: Image.asset('assets/Cancel.png', height: 30),
+                        onPressed: () {},
+                      ),
+                      Text(
+                        "10.00",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Spacer(),
+                      GestureDetector(
+                        child: Container(
+                          height: 33,
+                          width: 103,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(color: Colors.black, width: 1.5),
+                          ),
+                          child: Center(
+                            child: Text(
+                              'Claim',
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),

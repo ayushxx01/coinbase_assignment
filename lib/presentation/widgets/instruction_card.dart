@@ -24,7 +24,11 @@ class ProgressCard extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
-          BoxShadow(color: Colors.black26, blurRadius: 5, offset: Offset(2, 4)),
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 10,
+            offset: Offset(2, 4),
+          ),
         ],
       ),
       child: Column(
@@ -102,8 +106,6 @@ class ProgressCard extends StatelessWidget {
               ),
             ],
           ),
-
-          SizedBox(height: 10),
         ],
       ),
     );
