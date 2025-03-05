@@ -1,7 +1,4 @@
-import 'package:coinboost/presentation/screens/assignment_page.dart';
 import 'package:coinboost/presentation/screens/news_screen.dart';
-import 'package:coinboost/presentation/screens/profile.dart';
-import 'package:coinboost/presentation/screens/reward.dart';
 import 'package:coinboost/presentation/widgets/custom_bottom_bar.dart';
 import 'package:coinboost/presentation/widgets/my_button.dart';
 import 'package:flutter/material.dart';

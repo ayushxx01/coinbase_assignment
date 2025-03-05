@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // Define the DailyRewards widget as a StatefulWidget
 class DailyRewards extends StatefulWidget {
+  const DailyRewards({super.key});
+
   @override
   _DailyRewardsState createState() => _DailyRewardsState();
 }
