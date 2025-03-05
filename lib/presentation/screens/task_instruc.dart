@@ -10,11 +10,10 @@ class TaskPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(top: 40, left: 8, right: 8, bottom: 8),
+        padding: const EdgeInsets.only(top: 40, left: 16, right: 20, bottom: 8),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: 50),
+            const SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -24,7 +23,7 @@ class TaskPage extends StatelessWidget {
                     Navigator.pop(context);
                   },
                 ),
-                SizedBox(width: 60),
+                SizedBox(width: 85),
                 Text(
                   'Read News',
                   style: TextStyle(
@@ -38,53 +37,68 @@ class TaskPage extends StatelessWidget {
 
             Image.asset('assets/task2.png', height: 358),
 
-            Text(
-              'Rules of Task',
-              style: TextStyle(
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
-                fontSize: 20,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Rules of Task',
+                style: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  color: Colors.black,
+                  fontSize: 20,
+                ),
               ),
             ),
             SizedBox(height: 40),
 
-            Text(
-              '1. Keep scrolling for 10 minutes.',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                fontSize: 15,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                '1. Keep scrolling for 10 minutes.',
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              '2.Keep clicking every 30 seconds.',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                fontSize: 15,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                '2.Keep clicking every 30 seconds.',
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
               ),
             ),
             SizedBox(height: 10),
-            Text(
-              '3.Don\'t leave still screen for more than 30 seconds.',
-              style: TextStyle(
-                fontWeight: FontWeight.w400,
-                color: Colors.black,
-                fontSize: 15,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                '3.Don\'t leave still screen for more than 30 seconds.',
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  color: Colors.black,
+                  fontSize: 15,
+                ),
               ),
             ),
             SizedBox(height: 40),
-            MyButton(
-              onTap: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => NewsScreen()),
-                );
-              },
-              title: 'Start Task',
-              side: 193,
-              top: 48,
+            Align(
+              alignment: Alignment.centerLeft,
+              child: MyButton(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsScreen()),
+                  );
+                },
+                title: 'Start Task',
+                side: 193,
+                top: 48,
+              ),
             ),
           ],
         ),
